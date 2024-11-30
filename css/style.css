@@ -4,18 +4,53 @@
     --secondary-color: #3498db;
     --text-color: #333;
     --light-bg: #f4f4f4;
+    --transition: 0.3s ease;
+    --shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+/* Performance Optimizations */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Enhanced Loading Performance */
+.nav-links {
+    display: flex;
+    list-style: none;
+    content-visibility: auto;
+    contain-intrinsic-size: 50px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color var(--transition);
+}
+
+.nav-links li a:hover {
+    color: var(--secondary-color);
 }
 
 /* Header Styles */
@@ -42,22 +77,6 @@ nav {
     font-weight: bold;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: var(--secondary-color);
-}
-
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -67,6 +86,8 @@ nav {
     text-align: center;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x1080/?workspace') no-repeat center center/cover;
     color: white;
+    content-visibility: auto;
+    contain-intrinsic-size: 600px;
 }
 
 .hero-content h1 {
@@ -97,14 +118,16 @@ h2 {
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    content-visibility: auto;
+    contain-intrinsic-size: 400px;
 }
 
 .project-card {
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
 }
 
 .project-card:hover {
@@ -155,7 +178,7 @@ textarea {
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color var(--transition);
 }
 
 .cta-button:hover {
@@ -168,6 +191,21 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
+}
+
+/* Print Styles */
+@media print {
+    .nav-links, .cta-button {
+        display: none;
+    }
+    body {
+        color: black;
+        background: white;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
 }
 
 /* Responsive Design */
