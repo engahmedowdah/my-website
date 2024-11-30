@@ -7,69 +7,95 @@
     <meta name="keywords" content="تطوير مواقع, تصميم مواقع, برمجة, أحمد">
     <meta name="author" content="Ahmed Oudah">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' cdnjs.cloudflare.com 'unsafe-inline'">
-    <meta name="theme-color" content="#2c3e50">
-    <meta name="robots" content="index, follow">
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <title>Ahmed Oudah - Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <div class="logo">Ahmed Oudah</div>
-            <ul class="nav-links">
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#about">عني</a></li>
-                <li><a href="#projects">مشاريعي</a></li>
-                <li><a href="#contact">اتصل بي</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="hero-content">
-            <h1>مرحباً، أنا أحمد</h1>
-            <p>مطور ومصمم مواقع محترف</p>
-            <a href="#projects" class="cta-button">تصفح أعمالي</a>
+            <div class="profile-img">
+                <img src="https://via.placeholder.com/150" alt="Ahmed Oudah" class="avatar">
+            </div>
+            <h1>م. أحمد عودة</h1>
+            <p class="title">مطور ومصمم مواقع</p>
+            <div class="social-links">
+                <a href="https://github.com/engahmedowdah" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/engahmedowdah" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:engahmedowdah@gmail.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <h2>نبذة عني</h2>
-        <div class="about-content">
-            <p>مطور مواقع متخصص في تصميم وتطوير المواقع الإلكترونية الاحترافية.</p>
+        <div class="container">
+            <h2>نبذة عني</h2>
+            <div class="about-content">
+                <p>مهندس برمجيات متخصص في تطوير وتصميم المواقع الإلكترونية. أمتلك خبرة في العديد من التقنيات الحديثة وأسعى دائماً لتقديم أفضل الحلول التقنية.</p>
+                <div class="skills">
+                    <div class="skill">HTML5 & CSS3</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">React</div>
+                    <div class="skill">Node.js</div>
+                    <div class="skill">Git</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <h2>مشاريعي</h2>
-        <div class="projects-grid">
-            <!-- Project cards will be added dynamically via JavaScript -->
+        <div class="container">
+            <h2>مشاريعي</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="مشروع 1">
+                    <div class="project-info">
+                        <h3>مشروع 1</h3>
+                        <p>وصف المشروع وتفاصيله</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> معاينة</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- يمكن إضافة المزيد من المشاريع هنا -->
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>اتصل بي</h2>
-        <div class="contact-content">
-            <form id="contact-form">
-                <input type="text" placeholder="الاسم" required>
-                <input type="email" placeholder="البريد الإلكتروني" required>
-                <textarea placeholder="رسالتك" required></textarea>
-                <button type="submit" class="cta-button">إرسال</button>
-            </form>
+        <div class="container">
+            <h2>تواصل معي</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:engahmedowdah@gmail.com">engahmedowdah@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/engahmedowdah" target="_blank">GitHub</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/engahmedowdah" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Ahmed Oudah. جميع الحقوق محفوظة</p>
     </footer>
